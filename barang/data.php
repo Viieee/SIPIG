@@ -77,6 +77,8 @@ include_once "../_header.php";
                             //agar tampilan terlihat lebih rapi.
                             //pada project ini limit hanya digunakan pada saat page pada state normal
                             //atau pada saat user tidak melakukan proses search barang
+                            //$posisi berperan sebagai offset (batas awal)  dari data yang akan ditampilkan
+                            //contoh : offsetnya 1, berarti data yang akan ditampilkan adalah data dari nomor 2
                             $query = "SELECT * FROM tb_barang  ORDER BY nama_barang LIMIT $posisi, $batas";
                             $queryJml = "SELECT * FROM tb_barang";
                             $no=$posisi+1;
@@ -98,14 +100,20 @@ include_once "../_header.php";
                                 <td><?=$no++?></td>
                                 <td><?=$data['nama_barang']?></td>
                                 <td><?=$data['stok_barang']?></td>
-                                <td class="text-center">
-                                    <a href="edit.php?id=<?=$data['id_barang']?>" class="btn btn-warning btn-xs">
-                                        <i class="glyphicon glyphicon-edit"></i>
-                                    </a>
-                                    <a href="delete.php?id=<?=$data['id_barang']?>" onclick="return confirm('Yakin aka nmenghapus data?')" class="btn btn-danger btn-xs">
-                                        <i class="glyphicon glyphicon-trash"></i>
-                                    </a>
-                                </td>
+                                <?php 
+                                if($_SESSION['lv']==1){
+                                    ?>
+                                    <td class="text-center">
+                                        <a href="edit.php?id=<?=$data['id_barang']?>" class="btn btn-warning btn-xs">
+                                            <i class="glyphicon glyphicon-edit"></i>
+                                        </a>
+                                        <a href="delete.php?id=<?=$data['id_barang']?>" onclick="return confirm('Yakin aka nmenghapus data?')" class="btn btn-danger btn-xs">
+                                            <i class="glyphicon glyphicon-trash"></i>
+                                        </a>
+                                    </td>
+                                <?php
+                                }
+                                ?>
                             </tr>
                         <?php
                         }

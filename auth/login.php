@@ -38,11 +38,11 @@ if(isset($_SESSION['user'])){
                     $user = trim(mysqli_real_escape_string($con, $_POST['user']));
                     $pass = sha1(trim(mysqli_real_escape_string($con, $_POST['pass'])));
                     $sql_login = mysqli_query($con, "SELECT * FROM tb_user WHERE username = '$user' AND password ='$pass'") or die(mysqli_error($con));
-                    $data = mysqli_fetch_assoc($sql_login);
+                    $data = mysqli_fetch_array($sql_login);
                     if(mysqli_num_rows($sql_login)>0){
                         //kalau tidak mau ada fitur edit profile begini saja sudah cukup
                         $_SESSION['user'] = $user;
-                        $_SESSION['lv']= (int)$data['level'];
+                        $_SESSION['lv']= $data['level'];
                         echo "<script>window.location='".base_url()."';</script>";
                     } else{?>
                         <div class = "row">

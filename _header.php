@@ -17,7 +17,7 @@ if(!isset($_SESSION['user'])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Login - Inventory</title>
+    <title>Inventory</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?=base_url()?>/_assets/css/bootstrap.min.css" rel="stylesheet">
@@ -51,6 +51,9 @@ if(!isset($_SESSION['user'])){
                 </li>
                 <li>
                     <a href="#">Data Barang Keluar/Masuk</a>
+                </li>
+                <li>
+                    <a href="<?=base_url('gudang')?>">Data Gudang</a>
                 </li>
                 <li>
                     <a href="<?=base_url('auth/logout.php')?>">
