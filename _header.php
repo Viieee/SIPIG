@@ -55,6 +55,15 @@ if(!isset($_SESSION['user'])){
                 <li>
                     <a href="<?=base_url('gudang')?>">Data Gudang</a>
                 </li>
+                <?php 
+                    if($_SESSION['lv']==1){
+                    ?>
+                        <li>
+                            <a href="<?=base_url('user')?>">Data User</a>
+                        </li>
+                    <?php
+                    }
+                    ?>
                 <li>
                     <a href="<?=base_url('auth/logout.php')?>">
                         <span class="text-danger">

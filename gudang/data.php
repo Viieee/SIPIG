@@ -12,7 +12,7 @@ include_once "../_header.php";
                 </a>
                 <a href="generate.php" class="btn btn-success btn-xs">
                     <i class="glyphicon glyphicon-plus"></i>
-                    Tambah Barang
+                    Tambah Data Gudang
                 </a>
             </div>
         </h4>
