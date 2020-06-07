@@ -17,11 +17,11 @@ include_once "../_header.php";
              <form action="proses.php" method="post">
                 <div class="form-group"> 
                     <label for=""></label>
-                    <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Barang" required>
+                    <input type="text" name="nama" class="form-control" placeholder="Nama Barang" required>
                 </div>
                 <div class="form-group"> 
                     <label for=""></label>
-                    <input type="number" name="stok" id="stok" class="form-control" placeholder="Stok Barang" required>
+                    <input type="text" name="stok" class="form-control" placeholder="Stok Barang" required>
                 </div>
                 <div class="form-group pull-right"> 
                     <input type="submit" name="add" value="Simpan" class="btn btn-success">

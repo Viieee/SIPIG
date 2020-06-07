@@ -26,7 +26,7 @@ include_once "../_header.php";
                             <th>Username</th>
                             <th>Password</th>
                             <th>Level</th>
-                            <th><i class="glyphicon glyphicon-cog"></i></th>
+                            <th><center><i class="glyphicon glyphicon-cog"></i></center></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,21 +36,26 @@ include_once "../_header.php";
                         $jml= mysqli_num_rows($sql_user);
                         if($jml>0){
                             while($data=mysqli_fetch_array($sql_user)){
-                            //name pada input checkbox menggunakan '[]' karena akan ada lebih dari 1 data?>
+                        ?>
                             <tr>
                                 <td><?=$no++?></td>
                                 <td><?=$data['nama_user']?></td>
                                 <td><?=$data['username']?></td>
                                 <td><?=$data['password']?></td>
                                 <td><?=$data['level']?></td>
-                                <td class="text-center">
-                                    <a href="edit.php?id=<?=$data['id_user']?>" class="btn btn-warning btn-xs">
-                                        <i class="glyphicon glyphicon-edit"></i>
-                                    </a>
-                                    <a href="delete.php?id=<?=$data['id_user']?>" onclick="return confirm('Yakin aka nmenghapus data?')" class="btn btn-danger btn-xs">
-                                        <i class="glyphicon glyphicon-trash"></i>
-                                    </a>
-                                </td>
+                        <?php if($data['username']!="admin"){
+                            ?>
+                            <td class="text-center">
+                                <a href="edit.php?id=<?=$data['id_user']?>" class="btn btn-warning btn-xs">
+                                    <i class="glyphicon glyphicon-edit"></i>
+                                </a>
+                                <a href="delete.php?id=<?=$data['id_user']?>" onclick="return confirm('Yakin akan nmenghapus data?')" class="btn btn-danger btn-xs">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                </a>
+                            </td>
+                        <?php
+                            
+                            }?>
                             </tr>
                     <?php
                             }

@@ -2,9 +2,9 @@
 //setting default timezone
 date_default_timezone_set('Asia/Jakarta');
 session_start();
-
+include_once "conn.php";
 //koneksi
-$con = mysqli_connect('localhost','Viieee','Inipass6690.','gudang');
+$con = mysqli_connect($connect['host'],$connect['user'],$connect['pass'],$connect['db']);
 if(mysqli_connect_errno()){
     echo mysqli_connect_error();
 }

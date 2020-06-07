@@ -2,9 +2,9 @@
 include_once "../_header.php";
 ?>
     <div class="box">
-        <h1>Barang</h1>
+        <h1>barang</h1>
         <h4>
-            <small>Edit Data Barang</small>
+            <small>Edit Data barang</small>
             <div class="pull-right">
                 <a href="data.php" class="btn btn-warning btn-xs">
                     <i class="glyphicon glyphicon-chevron-left"></i>
@@ -23,11 +23,11 @@ include_once "../_header.php";
                 <div class="form-group"> 
                     <label for="">Nama Barang</label>
                     <input type="hidden" name="id"  value="<?=$data['id_barang']?>">
-                    <input type="text" name="nama" id="nama" value="<?=$data['nama_barang']?>" class="form-control" placeholder="Nama Barang" required>
+                    <input type="text" name="nama" value="<?=$data['nama_barang']?>" class="form-control" placeholder="Nama barang" required>
                 </div>
                 <div class="form-group"> 
                     <label for="">Stok Barang</label>
-                    <input type="number" name="stok" id="stok" class="form-control"  value="<?=$data['stok_barang']?>" placeholder="Stok Barang" required>
+                    <input type="text" name="stok" id="stok" class="form-control"  value="<?=$data['stok_barang']?>" placeholder="Stok barang" required>
                 </div>
                 <div class="form-group pull-right"> 
                     <input type="submit" name="edit" value="Simpan" class="btn btn-success">
