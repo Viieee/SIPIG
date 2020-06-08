@@ -66,13 +66,20 @@ include_once "../_header.php";
                                 echo $data_barang['nama_barang']."<br>";
                             }
                             ?></td>
-                            <td> 
-                            <center>
-                                <a href="delete.php?id=<?=$data['id_delivery']?>" class ="btn btn-danger btn-xs" onclick="return confirm('Yakin aka menghapus data?')">
-                                 <i class="glyphicon glyphicon-trash"></i>
-                                </a>
-                            </center>
-                            </td>
+                            <?php 
+                            if($_SESSION['lv']==1){
+                                ?>
+                               <td> 
+                                    <center>
+                                        <a href="delete.php?id=<?=$data['id_delivery']?>" class ="btn btn-danger btn-xs" onclick="return confirm('Yakin aka menghapus data?')">
+                                        <i class="glyphicon glyphicon-trash"></i>
+                                        </a>
+                                    </center>
+                                </td>
+                            <?php
+                            }
+                            ?>
+                            
                         </tr>
                     <?php
                         }
