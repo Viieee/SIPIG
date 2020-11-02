@@ -1,7 +1,7 @@
 <?php
 $sql_details = array(
-    'user' => 'root',
-    'pass' => '',
+    'user' => 'Viieee',
+    'pass' => 'Inipass6690.',
     'db'   => 'gudang',
     'host' => 'localhost'
 );

@@ -13,7 +13,7 @@ if(mysqli_connect_errno()){
 function base_url($url = null)
 {
     //$base_url nanti diganti ketika upload ke hosting
-    $base_url = "http://localhost/SIPIG";
+    $base_url = "http://localhost/project/SIPIG";
     if($url != null){
         return $base_url."/".$url;
     } else{

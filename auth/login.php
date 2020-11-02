@@ -25,10 +25,11 @@ if(isset($_SESSION['user'])){
 </head>
 
 <body>
-
+    
     <div id="wrapper">
         <div class="container">
          <div align="center" style="margin-top: 210px;">
+         <h2 style="margin-bottom: 30px;">Sistem Informasi Pelacakan Inventory Gudang</h2>
             <?php
                 //trim() berfungsi menghapus spasi diawal dan diakhir
                 //mysqli_real_escape_string berfungsi untuk mencegah sql injection terhadap karakter karakter unik
